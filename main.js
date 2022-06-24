@@ -30,7 +30,14 @@ function calculator(number_1, number_2, operation) {
     }
   }
 
-console.log(calculator(2, 5, '+'));
+console.log(calculator(20, 5, '+'));
+console.log(calculator(20, 5, '-'));
+console.log(calculator(20, 5, '*'));
+console.log(calculator(20, 5, '/'));
+console.log(calculator(20, 5, '%'));
+
+/*
+// User input program code is still in working progress, it will be availaible when finished.
 
 console.log("Please select operation -\n+ Add\n- Subtract\n* Multiply\n/ Divide\n% remainder\n");
 
@@ -47,4 +54,4 @@ prompt.get([('number_1'), 'operation', ('number_2')], function (err, result) {
     console.log('You second number: ', (result.number_2));
     console.log((result.number_1), result.operation, (result.number_2), "= ", calculator((result.number_1), (result.number_2), result.operation));
 });
-
+*/
