@@ -55,3 +55,4 @@ prompt.get([('number_1'), 'operation', ('number_2')], function (err, result) {
     console.log((result.number_1), result.operation, (result.number_2), "= ", calculator((result.number_1), (result.number_2), result.operation));
 });
 */
+          
