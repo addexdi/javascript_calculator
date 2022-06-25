@@ -27,32 +27,39 @@ function calculator(number_1, number_2, operation) {
         return divide();
       case '%':
         return remainder();
+      default:
+        console.log("Invalid operator");
+        break;
     }
   }
 
-console.log(calculator(20, 5, '+'));
-console.log(calculator(20, 5, '-'));
-console.log(calculator(20, 5, '*'));
-console.log(calculator(20, 5, '/'));
-console.log(calculator(20, 5, '%'));
 
-/*
-// User input program code is still in working progress, it will be availaible when finished.
-
-console.log("Please select operation -\n+ Add\n- Subtract\n* Multiply\n/ Divide\n% remainder\n");
+console.log("Please select operation -\n+ Add\n- Subtract\n* Multiply\n/ Divide\n% remainder\nQ Quit\n");
 
 
 // Take input from the user
+
 var prompt = require(('prompt'));
 
 prompt.start();
 
+// This is prompt to quit the calculator
+prompt.get(['quit'], function(err, result) {
+  const Q = result.quit;
+ 
+  if (Q == "Q"){
+    console.log("Thanks for using my calculator");
+  }
+  else{
+
+    // This is prompt to get user input
 prompt.get([('number_1'), 'operation', ('number_2')], function (err, result) {
   
-    console.log('You first number: ', (result.number_1));
+
+    console.log('You first number: ', parseFloat(result.number_1));
     console.log('You select operation: ', result.operation);
-    console.log('You second number: ', (result.number_2));
-    console.log((result.number_1), result.operation, (result.number_2), "= ", calculator((result.number_1), (result.number_2), result.operation));
+    console.log('You second number: ', parseFloat(result.number_2));
+    console.log(parseFloat(result.number_1), result.operation, parseFloat(result.number_2), "= ", calculator(parseFloat(result.number_1), parseFloat(result.number_2), result.operation));
+    
 });
-*/
-          
+}});
